@@ -81,17 +81,20 @@ public class form_Refeicao extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jButton20 = new javax.swing.JButton();
         jlSoma = new javax.swing.JLabel();
-        btnPagamento = new javax.swing.JButton();
         jlPagamento = new javax.swing.JLabel();
-        jrdDinheiro = new javax.swing.JRadioButton();
-        jrdDebito = new javax.swing.JRadioButton();
-        jrdCredito = new javax.swing.JRadioButton();
-        jrdPix = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+        jtfPago = new javax.swing.JFormattedTextField();
+        jlTroco = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         TxtAluno = new javax.swing.JLabel();
         TxtPerfil = new javax.swing.JLabel();
+        jrdDinheiro = new javax.swing.JRadioButton();
+        jrdCredito = new javax.swing.JRadioButton();
+        jrdDebito = new javax.swing.JRadioButton();
+        jrdPix = new javax.swing.JRadioButton();
+        btnPagamento = new javax.swing.JButton();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -400,33 +403,25 @@ public class form_Refeicao extends javax.swing.JFrame {
         jlSoma.setForeground(new java.awt.Color(255, 0, 0));
         jlSoma.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
 
-        btnPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/24x24/_recibo.png"))); // NOI18N
-        btnPagamento.setText("Pagamento");
-        btnPagamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPagamentoActionPerformed(evt);
-            }
-        });
-
         jlPagamento.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jlPagamento.setForeground(new java.awt.Color(0, 102, 102));
         jlPagamento.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
 
-        pagamento.add(jrdDinheiro);
-        jrdDinheiro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrdDinheiro.setText("Dinheiro");
+        jButton1.setText("Calcular Troco");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        pagamento.add(jrdDebito);
-        jrdDebito.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrdDebito.setText("Debito");
+        jtfPago.setBackground(new java.awt.Color(204, 255, 204));
+        jtfPago.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,##0.00"))));
+        jtfPago.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
 
-        pagamento.add(jrdCredito);
-        jrdCredito.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrdCredito.setText("Credito");
-
-        pagamento.add(jrdPix);
-        jrdPix.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrdPix.setText("PIX");
+        jlTroco.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jlTroco.setForeground(new java.awt.Color(51, 0, 204));
+        jlTroco.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlTroco.setText("1,50");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -439,39 +434,25 @@ public class form_Refeicao extends javax.swing.JFrame {
                 .addComponent(jlSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jlTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jrdDinheiro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrdPix)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrdCredito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrdDebito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPagamento)
+                .addComponent(jtfPago)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                            .addComponent(jlSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrdDinheiro)
-                    .addComponent(jrdPix)
-                    .addComponent(jrdCredito)
-                    .addComponent(jrdDebito))
-                .addGap(17, 17, 17))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addComponent(btnPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlPagamento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlTroco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfPago, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -484,6 +465,30 @@ public class form_Refeicao extends javax.swing.JFrame {
 
         TxtPerfil.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         TxtPerfil.setText("Teste");
+
+        pagamento.add(jrdDinheiro);
+        jrdDinheiro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jrdDinheiro.setText("Dinheiro");
+
+        pagamento.add(jrdCredito);
+        jrdCredito.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jrdCredito.setText("Credito");
+
+        pagamento.add(jrdDebito);
+        jrdDebito.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jrdDebito.setText("Debito");
+
+        pagamento.add(jrdPix);
+        jrdPix.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jrdPix.setText("PIX");
+
+        btnPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/24x24/_recibo.png"))); // NOI18N
+        btnPagamento.setText("Pagamento");
+        btnPagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagamentoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -500,11 +505,30 @@ public class form_Refeicao extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TxtPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jrdDinheiro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrdPix)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrdCredito)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrdDebito)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPagamento)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrdDinheiro)
+                    .addComponent(jrdPix)
+                    .addComponent(jrdCredito)
+                    .addComponent(jrdDebito)
+                    .addComponent(btnPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TxtAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
@@ -523,16 +547,14 @@ public class form_Refeicao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -957,6 +979,17 @@ public class form_Refeicao extends javax.swing.JFrame {
         }       
     }//GEN-LAST:event_jButton20ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String vPago = jtfPago.getText();
+        String vTotal = jlPagamento.getText();
+        
+        if (vPago.equals("")){
+            JOptionPane.showMessageDialog(this, "Não há valor para Calcular");
+        }else{
+            calcularTroco();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1003,6 +1036,24 @@ public class form_Refeicao extends javax.swing.JFrame {
         }
          return valorLiquido;   
         }
+    
+    private void calcularTroco(){
+        double troco = 0;
+        String total = jlPagamento.getText();
+        String vPago = jtfPago.getText();
+        
+        total = total.replace(",",".");
+        Double totalFormatado = Double.parseDouble(total);
+        
+        vPago = vPago.replace(",",".");
+        Double vPagoFormatado = Double.parseDouble(vPago);
+        
+        troco = vPagoFormatado - totalFormatado;
+        
+        DecimalFormat tc = new DecimalFormat("#.00");
+        String trocoFormatado = tc.format(troco);
+        jlTroco.setText(trocoFormatado);
+    }
             
     private void desconto(){
         double desconto = 0;    
@@ -1052,6 +1103,7 @@ public class form_Refeicao extends javax.swing.JFrame {
     private javax.swing.JButton btVegetarianos;
     private javax.swing.JButton btnPagamento;
     private view.form_Login form_Login1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton20;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel2;
@@ -1070,11 +1122,13 @@ public class form_Refeicao extends javax.swing.JFrame {
     private javax.swing.JButton jbpaofresco;
     private javax.swing.JLabel jlPagamento;
     private javax.swing.JLabel jlSoma;
+    private javax.swing.JLabel jlTroco;
     private javax.swing.JRadioButton jrdCredito;
     private javax.swing.JRadioButton jrdDebito;
     private javax.swing.JRadioButton jrdDinheiro;
     private javax.swing.JRadioButton jrdPix;
     private javax.swing.JTable jtVendas;
+    private javax.swing.JFormattedTextField jtfPago;
     private javax.swing.ButtonGroup pagamento;
     // End of variables declaration//GEN-END:variables
 }

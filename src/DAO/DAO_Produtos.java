@@ -75,7 +75,7 @@ public class DAO_Produtos extends ConexaoMySql{
         + "pro_nome, "
         + "pro_descricao, "
         + "pro_valor "
-        + "FROM " + unidade + "; WHERE pk_id_produto = '"+pIdProduto+"';");
+        + "FROM " + unidade + " WHERE pk_id_produto = '"+pIdProduto+"';");
             while (this.getResultSet().next()) {
                 modelProduto.setIdproduto(this.getResultSet().getInt(1));
                 modelProduto.setProNome(this.getResultSet().getString(2));

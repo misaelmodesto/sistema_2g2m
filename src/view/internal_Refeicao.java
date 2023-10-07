@@ -75,15 +75,20 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
         btVegetarianos = new javax.swing.JButton();
         btOvosMechidos = new javax.swing.JButton();
         btFrutas = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jButton20 = new javax.swing.JButton();
-        jlSoma = new javax.swing.JLabel();
-        btnPagamento = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         TxtAluno = new javax.swing.JLabel();
         TxtPerfil = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jButton20 = new javax.swing.JButton();
+        jlSoma = new javax.swing.JLabel();
+        btnPagamento = new javax.swing.JButton();
+        jlPagamento = new javax.swing.JLabel();
+        jrdDinheiro = new javax.swing.JRadioButton();
+        jrdDebito = new javax.swing.JRadioButton();
+        jrdCredito = new javax.swing.JRadioButton();
+        jrdPix = new javax.swing.JRadioButton();
 
         setClosable(true);
 
@@ -367,48 +372,6 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton20.setText("Excluir");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
-            }
-        });
-
-        jlSoma.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jlSoma.setForeground(new java.awt.Color(255, 0, 0));
-        jlSoma.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-
-        btnPagamento.setText("Pagamento");
-        btnPagamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPagamentoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(138, 138, 138)
-                .addComponent(jlSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                    .addComponent(jlSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
@@ -443,10 +406,94 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TxtAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(TxtPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/24x24/_excluir.png"))); // NOI18N
+        jButton20.setText("Excluir");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        jlSoma.setBackground(new java.awt.Color(255, 255, 255));
+        jlSoma.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jlSoma.setForeground(new java.awt.Color(255, 0, 0));
+        jlSoma.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
+        btnPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/24x24/_recibo.png"))); // NOI18N
+        btnPagamento.setText("Pagamento");
+        btnPagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagamentoActionPerformed(evt);
+            }
+        });
+
+        jlPagamento.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jlPagamento.setForeground(new java.awt.Color(0, 102, 102));
+        jlPagamento.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
+        jrdDinheiro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jrdDinheiro.setText("Dinheiro");
+
+        jrdDebito.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jrdDebito.setText("Debito");
+
+        jrdCredito.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jrdCredito.setText("Credito");
+
+        jrdPix.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jrdPix.setText("PIX");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jlSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jrdDinheiro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrdPix)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrdCredito)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrdDebito)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPagamento)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                            .addComponent(jlSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrdDinheiro)
+                    .addComponent(jrdPix)
+                    .addComponent(jrdCredito)
+                    .addComponent(jrdDebito))
+                .addGap(17, 17, 17))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(btnPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -462,9 +509,9 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -473,11 +520,11 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -798,7 +845,19 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void btnPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagamentoActionPerformed
+
+        // Verificar se pelo menos um RadioButton está selecionado
+        if (!jrdDinheiro.isSelected() && !jrdPix.isSelected() && !jrdDebito.isSelected() && !jrdCredito.isSelected()) {
+            JOptionPane.showMessageDialog(this, "Informar Forma de Pagamento!.", "Atenção", JOptionPane.WARNING_MESSAGE);
+            return; // Impede a execução do código subsequente se nenhum RadioButton estiver selecionado
+        }
         int codigoVenda = 0;
+        String formPagamento = null;
+
+        String total = jlSoma.getText();
+        total = total.replace(",",".");
+        Double totalFormatado = Double.parseDouble(total);
+
         listaModelVendasProdutos = new ArrayList<>();
 
         if (AlunosSingleton.getInstance().getPerfil().equals("Consumidor Externo")){
@@ -814,8 +873,19 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
         } catch (Exception ex) {
             Logger.getLogger(form_Refeicao.class.getName()).log(Level.SEVERE, null, ex);
         }
+        if (jrdDinheiro.isSelected()){
+            formPagamento = "Dinheiro";
+        }else if(jrdPix.isSelected()){
+            formPagamento = "PIX";
+        }else if(jrdDebito.isSelected()){
+            formPagamento = "Debito";
+        }else if(jrdCredito.isSelected()){
+            formPagamento = "Credito";
+        }
+
         Model_Vendas.setVen_desconto(AlunosSingleton.getInstance().getPerfil());
-        Model_Vendas.setVen_valor_Bruto(Double.valueOf(jlSoma.getText()));
+        Model_Vendas.setVen_formpagamento(formPagamento);
+        Model_Vendas.setVen_valor_Bruto(totalFormatado);
         Model_Vendas.setVen_valor_Liquido(calcularDesconto(Model_Vendas.getVen_valor_Bruto(), Model_Vendas.getVen_desconto()));
         Model_Vendas.setVen_hora(datas.retornarHora());
 
@@ -837,7 +907,14 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
             modelVendaProduto.setVen_pro_valor((double) jtVendas.getValueAt(i, 2));
             listaModelVendasProdutos.add(modelVendaProduto);
         }
+
         controllerVendaProduto.salvarVendaProdutoController(listaModelVendasProdutos);
+
+        form_Perfil formPerfil = new form_Perfil();
+        this.dispose();
+
+        formPerfil.setVisible(true);
+
     }//GEN-LAST:event_btnPagamentoActionPerformed
 
     public static Double calcularDesconto(Double pValorTotal, String pPerfil) {
@@ -895,7 +972,12 @@ public class internal_Refeicao extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbMingau;
     private javax.swing.JButton jbSuco;
     private javax.swing.JButton jbpaofresco;
+    private javax.swing.JLabel jlPagamento;
     private javax.swing.JLabel jlSoma;
+    private javax.swing.JRadioButton jrdCredito;
+    private javax.swing.JRadioButton jrdDebito;
+    private javax.swing.JRadioButton jrdDinheiro;
+    private javax.swing.JRadioButton jrdPix;
     private javax.swing.JTable jtVendas;
     // End of variables declaration//GEN-END:variables
 }
